@@ -1,0 +1,46 @@
+@using System.Configuration
+@model dynamic
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=8.0, user-scalable=yes" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@Model.Title</title>
+</head>
+<body>
+    <div id="app"></div>
+<script type="text/javascript">
+        window.InitData = {};
+        window.jsonObj=@Html.Raw(Model.PdfCatalog);
+        window.InitData.pageCount=@Model.PageMax;
+        var noteIsMy = false;
+        //第一步获取相关参数和学习信息
+        window.InitData.ApplicationPath = '@Url.Content("~")';
+        window.InitData.Lid = '@Model.Lid';
+        window.InitData.Topic = '@Model.Topic';
+        window.InitData.AppId = '@Model.AppId';
+        window.InitData.Confirm = '@Resources.Common.Confirm';
+        window.InitData.Cancel = '@Resources.Common.Cancel';
+        window.InitData.GroupId = '@Model.GroupId'; //群组学习Id,暂时保存，和学术社交相关
+        window.InitData.dbCode = '@Model.DbCode';
+        window.InitData.NoteList = [];
+        window.InitData.fileName = '@Model.FileName';
+        window.InitData.FileSourceType = '@Model.FileSourceType';
+        window.InitData.tableName = '@Model.TableName';
+        window.InitData.HfsFileCode = '@Model.HfsFileCode';
+        window.InitData.chapters=[];
+        window.InitData.Discuss_Read_AlertFillContent = '@International.Discuss.DiscussCshtml.Discuss_Read_AlertFillContent';
+        window.InitData.appId ="@Model.AppId";
+        window.InitData.ImageBasePath='@ConfigurationManager.AppSettings["imageBasePath"]';
+        window.InitData.currentSign = [];
+        window.InitData.DcType = '@Model.DcType';
+        window.InitData.ClockUrl = '@ConfigurationManager.AppSettings["clockUrl"]';
+    </script>    
+ </body>       
+
+</html>

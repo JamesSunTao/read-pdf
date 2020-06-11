@@ -1,0 +1,36 @@
+.study-l,.study-r{box-sizing: border-box;position:relative;height:100%;transition-duration: .3s;}
+.study-l{float:left;width:280px;background:#eceff4;border-right:1px solid #a4a9bd;z-index: 6;}
+.study-l-t{position:relative; height:45px;padding: 0 0 0 16px;line-height:44px;text-align:center;font-size:14px;color:#666;background:#eceff4; border-bottom:1px solid #d9dfe8;}
+.study-l-t-x{padding:0 30px;}
+.study-l .ckwx:after{background:transparent}
+.study-l-t-x .switch{float:right;margin-top:11px;margin-left:20px;}
+/*右侧侧头部*/
+.ckwx{position: relative;display: inline-block;cursor: pointer;margin: 0 4%;line-height: 41px;}
+.ckwx.b{color:#333;border-bottom:3px solid #ff8125;}
+/*.ckwx:after{content:"";display:inline-block;position: absolute;top: 13px;right:-35%;padding: 5px 1px 10px 0;font-size: 0;background: #ddd;}*/
+.study-l-t .ckwx:nth-last-of-type(2):after{background:none}
+/*开关按钮*/
+.switch{position:relative;display:inline-block;height: 22px;line-height: 22px;font-size: 12px!important;background: #fff;color: #555!important;border-radius:30px;border: 1px solid #d4d2d2;cursor: pointer;}
+.switch-btn{position:absolute;left: 3px;top: 3px;width: 16px;height: 16px;background: #d4d2d2;border-radius:50%;}
+.switch-w{display:none;}
+.switch-w:first-child{display:block;padding:0 8px 0 25px;}
+.switch-w.tl{margin-right: 24px;padding-left:10px;}
+.r-1{left:auto;right: 2px;}
+.switch-w-off,#switchReferBook .switch-w-off {padding: 0 25px 0 8px;}
+.switch.cur {background: #4391b9;border-color: #4391b9;color: #fff!important;}
+.switch.cur .switch-btn{background:#fff;}
+/*左右收起按钮*/
+.tab-btn{position:absolute;top:0;bottom:0;height:44px; width:20px;text-align:center;background: #eceff4; border:0 solid #d9dfe8; z-index: 2; cursor: pointer;}
+.tab-btn-r{left:0;border-right-width:1px}
+.tab-btn-l{right:0px;border-left-width:1px;}
+.study-l-hide,.pop-branch-box .study-l{z-index: 30;}
+.study-r-hide{}
+.study-l-hide .tab-btn,.study-r-hide .tab-btn{border-bottom:1px solid #d9dfe8;transform: rotate(180deg);}
+.study-l-hide .tab-btn-l{right: -21px;}
+.study-r-hide .tab-btn-r{left: -21px;}
+/*左侧头部按钮*/
+.study-l-tbox{padding:4px;text-align:center;background:#d8dfe9;}
+.study-l-tbox[style~="block;"]+.l-hide{top: 91px;}
+/*.bio-layout .l-hide{top:90px;}
+.bio-layout .study-l-tbox {text-align: left;}*/
+.drag-btn {position: absolute;top: 0;bottom: 0;left: -4px;width: 4px;cursor: w-resize;}

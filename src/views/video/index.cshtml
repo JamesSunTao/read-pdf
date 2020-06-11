@@ -1,0 +1,55 @@
+@using System.Configuration
+@using Newtonsoft.Json
+@using CRSP.Read.Common
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <title>@Model.Title</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        window.InitData = {};
+        window.InitData.fileName = '@Model.FileName';
+        window.InitData.dbCode = '@Model.DbCode';
+        window.InitData.isTreeCatalog = "false";
+        window.InitData.tableName = '@Model.TableName';
+        window.InitData.ImageBasePath =  '@ConfigurationManager.AppSettings["imageBasePath"]';
+        window.InitData.domain = '@ConfigSettings.ServerDomain';
+        window.InitData.AppId = "@Model.AppId";
+        window.InitData.Lid =  '@Model.Lid';
+        window.InitData.dbName = '@Model.TableName';
+        window.InitData.FileSourceType = '@Model.FileSourceType';
+        window.InitData.tasktype = 1;
+        window.InitData.ueditorDomain= '@ConfigSettings.UeditorDomain';
+        window.InitData.ApplicationPath = '@Url.Content("~")';
+        window.InitData.Topic = '@Model.Topic';
+        window.InitData.SourceTitle = "";
+        window.InitData.AuthorNames = "";
+        window.InitData.psmcUrl = '@ConfigSettings.PsmcUrl';
+        window.CnkiNode = '@ConfigurationManager.AppSettings["CnkiNode"]';
+        window.InitData.XmlEditorUrl = '@ConfigSettings.XmlEditorUrl';
+        window.InitData.IsLimited = @Model.IsLimited;
+        window.InitData.StudyInfo = @Html.Raw(JsonConvert.SerializeObject(Model.StudyInfo));
+        window.InitData.Act = '@Model.Act';  //判断引用的文件类型  空为普通pdf，refer为参考文献pdf，compare为对比阅读pdf
+        window.InitData.DcType = '@Model.DcType'; // 11是视频 ,10是音频
+    
+        //  音视频
+        window.InitData.videoAndAudioUrl = '@ConfigSettings.videoAndAudioUrl'+'@Model.FileName';
+         // 判断是否是资源包内文献
+        window.InitData.isXMRDFile = '@Model.IsXMRDFile';
+    </script>
+     <script src="@ConfigSettings.CommonPiccacheServer/Scripts/ueditor/ueditor.config.js"></script>
+    <script src="@ConfigSettings.CommonPiccacheServer/Scripts/ueditor/ueditor.all.js"></script>
+    <script src="@ConfigSettings.CommonPiccacheServer/Scripts/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script src="@ConfigSettings.CommonPiccacheServer/Scripts/ueditor/third-party/codemirror/codemirror.js"></script>
+    <script src="@ConfigSettings.CommonPiccacheServer/Scripts/ueditor/third-party/zeroclipboard/ZeroClipboard.js"></script>
+</body>
+</html>

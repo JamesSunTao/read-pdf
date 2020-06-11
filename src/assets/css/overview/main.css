@@ -1,0 +1,76 @@
+/*-------------------------------------
+研学移动端	
+author:	UI_group	time:20180323
+
+swt   20190827
+-------------------------------------*/
+// *{-webkit-overflow-scrolling:touch}
+// :focus{outline:0}
+// body,h1,h2,h3,h4,h5,h6,p,ul{margin:0;padding:0;font-weight:400;font-family:"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif}
+// ul{list-style:none}
+// html{font-size:calc(100vw / 7.5)}
+// body,html{height:100%;overflow:auto}
+// .wrap{overflow:auto;height:100%}
+// a{text-decoration:none;color:inherit}
+// #okms_top{display:none}
+// img{border:none;outline:0}
+// .chapter-wrap{position:relative;padding:22px 15px 22px 16px;font-size:16px;line-height:26px;word-break:break-word}
+// .ChapterH1 h1{font-size:.4rem;margin-bottom:.39rem}
+// / .ChapterMsg{margin:0 .15rem .2rem}
+// .ChapterMsg ul{position:relative;padding-left:25px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+// .ChapterMsg ul:first-child:before,.ChapterMsg ul:last-child:before{content:"";position:absolute;top:4px;left:0;width:18px;height:18px;background:url(../../Images/discussMobile/i-user.png);background-size:contain}
+// .ChapterMsg ul:last-child:before{background:url(../../Images/discussMobile/i-address.png) no-repeat;background-size:contain}
+// .ChapterMsg li{display:inline-block}
+// .ChapterMsg li+li:before{content:","}
+// .ChapterP+.Content,.Content{margin-top:.3rem}
+// .ui-link{color:#4c8bf5}
+// .text-hide{overflow:hidden;white-space:normal;word-wrap:break-word;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+// .ChapterP{padding:4px 7px;background:#eff5ff}
+// .ChapterP:before{content:"";float:left;width:8px;height:8px;margin:9px 0 0 4px;background:#4c8bf5;border-radius:50%}
+// .ChapterP p{margin-bottom:5px!important;padding-left:10px;text-indent:0!important;color:#666;overflow:hidden}
+// .ChapterP .para{position:relative}
+// .ChapterP .para:after{content:"";position:absolute;bottom:-2px;right:0;width:18px;height:18px;background:#fff;border:1px solid #e5e5e5;border-radius:4px}
+// .ChapterP .para:before{content:"";position:absolute;width:7px;height:7px;border-top:1px solid #999;border-left:1px solid #999;bottom:6px;right:6px;z-index:1;transform:rotate(-135deg)!important}
+// .ChapterP:nth-of-type(3) p{-webkit-line-clamp:9;color:#666}
+// .ChapterP p .b{color:#333}
+// .ChapterP a{color:#4c8bf5}
+// .ChapterP.clamp-auto p{-webkit-line-clamp:50}
+// .clamp-auto .para:before{bottom:2px;transform:rotate(45deg)!important}
+// .chapter-wrap h1{font-size:20px;margin-bottom:20px;text-align:justify}
+// .chapter-wrap h2,.chapter-wrap h3,.chapter-wrap h4,.chapter-wrap h5{font-size:18px;margin-bottom:15px}
+// .chapter-wrap img{max-width:100%}
+// .ChapterWrap img[type=formula]{max-height:32px}
+// .figure-center{display:inline-block}
+// h4.figure{margin-bottom:0}
+// .chapter-box{letter-spacing:1px}
+// .chapter-box p{margin-bottom:24px;word-break:break-all;text-indent:2em;text-align:justify}
+// .add-note p{display:inline;margin-bottom:5px;text-indent:0}
+// .add-note p+p{margin-right:7px}
+// .r-note-btn{position:absolute;top:0;bottom:0;right:-12px;width:.56rem}
+// .note-add,.note-num{display:block;width:20px;height:20px;margin-bottom:6px;line-height:20px;text-align:center;letter-spacing:0;color:#4c8bf5;background:#d7e2f5;border-radius:4px}
+// .note-num{font-size:14px;text-indent:0}
+// .note-btn:first-child:before,.note-num:empty{display:none}
+// .chapter-box,.note-add{position:relative}
+// .note-add:after,.note-add:before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;background:currentColor}
+// .note-add:before{width:11px;height:1px}
+// .note-add:after{width:1px;height:11px}
+// .set-btn-group{position:absolute;display:inline-block;height:.76rem;line-height:.76rem;padding:0 .34rem;background:#333;border-radius:.08rem}
+// .set-btn-group:after{content:"";position:absolute;left:20%;bottom:-.4rem;width:0;height:0;border:.2rem solid transparent;border-top-color:#333}
+// .note-btn{font-size:.26rem;color:#fff}
+// .note-btn:before{content:"";padding:.32rem .34rem .06rem 0;margin-left:.27rem;font-size:0;border-left:1px solid #4c4c4c}
+// .mark-line{padding-bottom:2px;font-style:normal;border-bottom:.5px solid #4c8bf5}
+// mark{background:#d7e2f5}
+// .icon,.icon-sm,.note-co-b,.note-co-o{display:inline-block;width:22px;height:22px;vertical-align:middle;background-size:cover}
+// .note-co-b,.note-co-o{width:.27rem;height:.27rem;background:url(../../Images/discussMobile/note.png) no-repeat;background-size:cover}
+// .add-note i{display:none}
+// .shaw{position:fixed;top:0;bottom:0;right:0;left:0;background:rgba(0,0,0,.4);z-index:11;display:none}
+// [v-cloak]{display:none}
+// #rightaddnote{position:absolute;right:0}
+// .art-wrap{padding:.2rem .5rem}
+// .art-title{font-size:22px;padding:15px 10px}
+// .art-p{font-size:14px;margin-bottom:.2rem;overflow:hidden;line-height:.44rem}
+// .art-pl{float:left;color:#333}
+// .art-pr{color:#555}
+// .art-bottom{display:-webkit-box;display:-webkit-flex;display:flex;justify-content:space-between;position:fixed;bottom:0;left:0;right:0;border-top:.5px solid #eee}
+// .art-b-ntn{display:block;width:100%;height:.8rem;line-height:.8rem;text-align:center;font-size:.16rem}
+// .art-b-ntn:first-child{background:#3990d7;color:#fff}

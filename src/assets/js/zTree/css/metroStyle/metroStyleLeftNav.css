@@ -1,0 +1,9 @@
+.ztree li a:hover{ text-decoration: none;}
+.ztree .node_name{padding: 3px; border-radius: 3px;}
+.ztree li a:hover .node_name{ text-decoration: none;background-color: #e5e5e5;}
+.ztree li a.curSelectedNode{ background-color: transparent;}
+.ztree li a.curSelectedNode .node_name{ background-color: #2a8cd7;color: #fff;}
+/*µ¼º½Ê÷*/
+.ztree *{font: 14px "\5FAE\8F6F\96C5\9ED1";}
+.ztree li{line-height: 20px;}
+.ztree li a{max-width: 90%; overflow: hidden;white-space: nowrap; text-overflow: ellipsis;}

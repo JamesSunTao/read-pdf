@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <!--<link rel="stylesheet" href="/src/assets/css/collectArticle.css">-->
+    <title>video在线阅读</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+       window.InitData = {};
+        window.InitData.catalog = [{id:"1",pid:"1",name:"Page 1",icon:"/read//front_end/src/modules/pdf/images/nav-icon.png",page:"1"},{id:"2",pid:"2",name:"Page 2",icon:"/read//front_end/src/modules/pdf/images/nav-icon.png",page:"2"}];
+        window.InitData.isTreeCatalog = "False";  // 判断目录是否为树形结构
+        window.InitData.pageCount = 2;
+        window.InitData.HfsFileCode = 'Journal_GPRJ201221095';
+        window.InitData.fileName = 'GPRJ201221095';
+        window.InitData.dbCode = 'CJFD';
+        window.InitData.tableName = 'CJFDTOTAL';
+        window.InitData.ImageBasePath =  'http://x.dev.cnki.net/resource/';
+        window.InitData.domain = 'http://x.dev.cnki.net/';
+        window.InitData.AppId = "CRSP_PSMC_DEV";
+        window.InitData.Lid =  'CJFD|GPRJ201221095';
+        window.InitData.dbName = 'CJFDTOTAL';
+        window.InitData.FileSourceType = '1';
+        window.InitData.tasktype = 1;
+        window.InitData.ueditorDomain= '';
+        window.InitData.ApplicationPath = '/read/';
+        window.InitData.Topic = 'ff7a331b-a1b0-4963-90bb-d24633f7db9a';
+        window.InitData.SourceTitle = "";
+        window.InitData.AuthorNames = "";
+        window.InitData.psmcUrl = 'http://x.dev.cnki.net/psmc';
+        window.CnkiNode = 'http://kns.cnki.net';
+        window.InitData.XmlEditorUrl = 'http://x.dev.cnki.net/XmlEditor';
+        window.InitData.IsLimited = 0;
+        window.InitData.StudyInfo = {"Dbcode":"CJFD","FileCode":"GPRJ201221095","FileSourceType":1,"Grade":5,"Id":"2d14a22c-a309-4ba7-86d5-b37ae60f774f","LastStudyTime":"2019-10-15T16:28:15","LearnLabels":[{"CTime":"0001-01-01T00:00:00","LabelDescribe":null,"LabelId":"af437f7c-9f0b-4731-af9d-59ebe341b42a","LabelName":"测试类","ParentId":null,"State":0,"Type":0,"UTime":"0001-01-01T00:00:00","UserId":null}],"ParentId":null,"PostTime":"2019-07-17T16:15:26","ReadPosition":null,"SignId":"af437f7c-9f0b-4731-af9d-59ebe341b42a","Status":0,"StudyId":"ff7a331b-a1b0-4963-90bb-d24633f7db9a","StudyPostTime":"0001-01-01T00:00:00","StudyStatus":0,"StudySummary":null,"StudyTitle":"test","StudyType":0,"StudyUserId":null,"TableName":"CJFD2012"};
+        window.InitData.Act = '';  //判断引用的文件类型  空为普通pdf，refer为参考文献pdf，compare为对比阅读pdf
+        window.InitData.DcType = '11'; // 11是视频 ,10是音频
+        window.InitData.TaskId = '0';
+        window.InitData.From = '';
+        window.InitData.TrilalReadUrl = 'http://x.dev.cnki.net/Trilalread/article/readonline'+ '?filename=' + window.InitData.fileName + '&tablename='
+            + window.InitData.tableName + '&dbcode=' + window.InitData.dbCode + '&topic=' + window.InitData.Topic + '&fileSourceType='
+            + window.InitData.FileSourceType +'&taskId='+window.InitData.TaskId+'&from='+window.InitData.From+ '&groupid=' + window.InitData.GroupId + '&appId=' + window.InitData.AppId; // 试读url
+        
+        // 下线，重新登陆
+        window.InitData.loginshow = false;              // 登录弹窗的显示与否
+        window.InitData.message = "";                   // 下线原因
+        window.InitData.url = window.location.href;                       // 再次登录需要跳转的地方
+        window.InitData.regshow = false;                // 是否直接显示注册页面
+        window.InitData.phone = "";                     // 用户手机号
+        window.InitData.Clientip = '192.168.21.35'; //用户IP
+     
+        window.InitData.ssoHost = 'http://sso.dev.cnki.net/sso';
+        window.SSOAPIURL = window.InitData.ssoHost.substring(0, window.InitData.ssoHost.length - 3);
+        window.InitData.ssoAppId = 'CRSP_READ_DEV';
+        window.InitData.ssoAppKey =  'OhbcyOu57I0eoeCL';
+        window.locale = 'zh';
+        window.InitData.environment = 'dev';
+        window.InitData.videoAndAudioUrl = 'http://192.168.103.54/video/342556F0-44AB-41B2-8BF7-9F279ADA24ED.MP4';
+        // window.InitData.videoAndAudioUrl = 'http://m10.music.126.net/20200114171234/da1a46177d79f638fa3f746417306f58/ymusic/7423/d019/4932/d2c07d118857cc6ab7a0a3b1fbb82dc0.mp3';
+
+        // 判断是否是资源包内文献
+        window.InitData.isXMRDFile = 1;
+    </script>
+    <!--编辑器-->
+    <!--<script src="/read/front_end/src/modules/obseverContent.js"></script>-->
+    <script src="/read/Scripts/ueditor/ueditor.config.js"></script>
+    <script src="/read/Scripts/ueditor/ueditor.all.min.js"></script>
+    <script src="/read/Scripts/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script src="/read/Scripts/ueditor/third-party/codemirror/codemirror.js"></script>
+    <script src="/read/Scripts/ueditor/third-party/zeroclipboard/ZeroClipboard.js"></script>
+    <!--<script src="/src/assets/js/collect.min.js"></script>-->
+
+    <!--抛物线-->
+    <!--<script src="/read/Scripts/jquery.fly.min.js"></script>-->
+</body>
+</html>

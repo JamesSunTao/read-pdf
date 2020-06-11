@@ -1,0 +1,20 @@
+/*加载提示页面*/
+html,body,.branch-box{height:100%;}
+body, p, dl, dd, h1, h2, h3, h4, h5, h6{margin: 0px;padding: 0;font-weight:normal;list-style: none;}
+img{border:none;}
+
+.empty-box {position: relative; height:100%;background: #f4f4f4;}
+.empity{ position: absolute;top: 30%;bottom: 0;left: 0; right: 0;text-align: center;}
+.empity h3{font-size:24px;}
+.empity p{font-size:16px;margin:10px 0 20px;}
+.empity .btn{font-size:15px;color:#fff;padding:8px 20px;background: #428bca;border-radius:3px;}
+.loading,.loading-2{position:absolute;top:50%;left:50%;transform: translate(-50%,-50%);margin-top: -45px;width:330px;padding:10px 20px;background:#fff;overflow:hidden;*margin-left:-165px;}
+.loading p, .loading-left, .loading-2 p{display:inline-block;*display: inline;zoom:1;vertical-align: middle;font:14px/1.5 "\5FAE\8F6F\96C5\9ED1";}
+.loading img{width:30px;height:30px;vertical-align: middle;}
+.loading p{ width: 82%; margin-left: 4%;}
+.loading-left{position: relative;width:63px;height:63px;margin-right: 10px;}
+.loading-num{position: absolute;top: 50%; left: 50%; margin-top: -12px;margin-left: -20px;width: 40px;text-align: center;}
+.loading-2 img{width:100%;}
+.loading-2 p{width: 72%;}
+
+.empty-box-Reference .loading-2{margin-left: -150px;margin-top: 0;}

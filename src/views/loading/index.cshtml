@@ -1,0 +1,29 @@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@Model.Title</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/javascript">
+        window.InitData = {};
+        window.InitData.DcType = '@Model.DcType';
+        window.InitData.tableName = '@Model.TableName';
+        window.InitData.fileName = '@Model.FileName';
+        window.InitData.dbCode = '@Model.DbCode';
+        window.InitData.tasktype = @Model.FileSourceType - 1;
+        window.InitData.AppId = "@Model.AppId";
+        window.InitData.ApplicationPath = '@Url.Content("~")';
+        window.InitData.Topic = '@Model.Topic';
+        window.InitData.Act = '@Model.Act';
+        window.InitData.FileSourceType = '@Model.FileSourceType';
+        window.InitData.CustomReading = '@Model.customReading';
+    </script>
+</body>
+</html>

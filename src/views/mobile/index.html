@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pdf-Mobile</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        window.InitData = {};
+        window.jsonObj = [{ id: "e0057f6d-50a7-488b-a884-0b459be09182", pid: "", name: "摘要", page: "3" }, { id: "cefc800b-c6dc-4f75-9ca9-85d2aa4fc999", pid: "", name: "ABSTRACT", page: "5" }, { id: "833aae6e-0b05-4826-8bf1-b081b5a4ce70", pid: "", name: "引言", page: "11" }, { id: "35f5bd77-763c-40cc-9574-6cd8bef4bdbd", pid: "833aae6e-0b05-4826-8bf1-b081b5a4ce70", name: "一 选题意义", page: "11" }, { id: "1df0330a-97bd-4a8a-b391-060309d57651", pid: "833aae6e-0b05-4826-8bf1-b081b5a4ce70", name: "二 研究的相关综述", page: "13" }, { id: "561ec6ef-3c80-4396-960a-9723c14b8815", pid: "833aae6e-0b05-4826-8bf1-b081b5a4ce70", name: "三 主要内容和研究方法", page: "15" }, { id: "6aee6a1d-e16c-40c1-b479-020f53b08824", pid: "", name: "第一章 《穆斯林的葬礼》与《采桑子》的创作", page: "17" }, { id: "4144bc9b-d3cd-469d-abbd-a26de4934a4a", pid: "6aee6a1d-e16c-40c1-b479-020f53b08824", name: "第一节 霍达与《穆斯林的葬礼》的创作", page: "17" }, { id: "68b0f134-85eb-43eb-aed5-e19b51e17e61", pid: "6aee6a1d-e16c-40c1-b479-020f53b08824", name: "第二节 叶广芩与《采桑子》的创作", page: "19" }, { id: "2d29982b-a9b7-44b4-b0a5-dc5b344651bd", pid: "", name: "第二章 小说的民族心理与作家家世背景", page: "21" }, { id: "621322f3-b69f-4c3b-aeab-090b58f2be12", pid: "2d29982b-a9b7-44b4-b0a5-dc5b344651bd", name: "第一节 民族心理特色", page: "21" }, { id: "77048f93-1d7b-4e69-abdf-3914c33cf8b0", pid: "621322f3-b69f-4c3b-aeab-090b58f2be12", name: "一、《穆斯林的葬礼》独特的民族心理", page: "22" }, { id: "0bade232-0568-4c34-b5bc-d45a252e9db1", pid: "621322f3-b69f-4c3b-aeab-090b58f2be12", name: "二、《采桑子》呈现出的民族心态", page: "24" }, { id: "924dc53a-6420-4333-8286-7bf0e3b45b90", pid: "2d29982b-a9b7-44b4-b0a5-dc5b344651bd", name: "第二节 作家家世与小说创作", page: "26" }, { id: "c96975ad-6278-4bd4-8f97-db4c64e3d184", pid: "924dc53a-6420-4333-8286-7bf0e3b45b90", name: "一、霍达回族玉器家世", page: "26" }, { id: "f01436f0-040c-4ecc-98b5-5bdda224620c", pid: "924dc53a-6420-4333-8286-7bf0e3b45b90", name: "二、叶广芩满族没落家世", page: "28" }, { id: "2dac9b76-966e-480c-83e2-ba0a37c9cd9a", pid: "", name: "第三章 作品中的民族文化展现", page: "31" }, { id: "99c01cca-73b7-4e1c-8bad-bba8e70f7879", pid: "2dac9b76-966e-480c-83e2-ba0a37c9cd9a", name: "第一节 风格迥异的民族风俗", page: "31" }, { id: "4ed26362-e5bf-469a-84f7-8c24faeb6b67", pid: "99c01cca-73b7-4e1c-8bad-bba8e70f7879", name: "一、宗教信仰影响下的回族风俗", page: "32" }, { id: "033d00bf-a3f4-4d09-94ff-c00ad3c08a94", pid: "99c01cca-73b7-4e1c-8bad-bba8e70f7879", name: "二、满汉文化融合下的旗人风俗", page: "35" }, { id: "28d8580f-9fbc-4e83-aef6-1664877ae947", pid: "2dac9b76-966e-480c-83e2-ba0a37c9cd9a", name: "第二节 作品中人物性格特点", page: "39" }, { id: "dbe6de3e-8f93-404a-8b13-d31b1f9c1f77", pid: "28d8580f-9fbc-4e83-aef6-1664877ae947", name: "一、坚忍与敬畏", page: "39" }, { id: "4dc7795a-e3fb-4462-9de2-cae2d3ef1ce7", pid: "28d8580f-9fbc-4e83-aef6-1664877ae947", name: "二、豁达与淡泊", page: "41" }, { id: "4418f7af-b62f-43f5-8ea6-08f37f9b9bdd", pid: "2dac9b76-966e-480c-83e2-ba0a37c9cd9a", name: "第三节 对家族文化的思考", page: "44" }, { id: "794aba91-89b9-4831-9f94-0cd30371232b", pid: "4418f7af-b62f-43f5-8ea6-08f37f9b9bdd", name: "一、反思中的理想", page: "45" }, { id: "afc8762c-4d4a-49cd-ab46-6d10bf3fa56b", pid: "4418f7af-b62f-43f5-8ea6-08f37f9b9bdd", name: "二、批判中的眷恋", page: "48" }, { id: "4ba09352-9169-4f87-875c-155ab4625e00", pid: "", name: "第四章 小说艺术风格之异同", page: "53" }, { id: "cc9f30a1-794e-4f74-9048-1a8c8ec17304", pid: "4ba09352-9169-4f87-875c-155ab4625e00", name: "第一节 不同的叙事结构", page: "53" }, { id: "a86a7bf0-2536-4839-9a01-87e66e25b988", pid: "cc9f30a1-794e-4f74-9048-1a8c8ec17304", name: "一、《穆斯林的葬礼》双线交叉结构", page: "54" }, { id: "98730edb-9a5c-440c-ba65-9955d492289d", pid: "cc9f30a1-794e-4f74-9048-1a8c8ec17304", name: "二、《采桑子》串联式叙述结构", page: "55" }, { id: "85e88ede-efbf-46f8-bca6-f5908277a516", pid: "4ba09352-9169-4f87-875c-155ab4625e00", name: "第二节 相异的叙述视角", page: "57" }, { id: "16c4417c-22f5-44bb-979a-d4c2ad608ea8", pid: "85e88ede-efbf-46f8-bca6-f5908277a516", name: "一、《穆斯林的葬礼》全知叙述视角", page: "57" }, { id: "aa7a938d-43b1-4b15-bbb4-a720c970efd2", pid: "85e88ede-efbf-46f8-bca6-f5908277a516", name: "二、《采桑子》双重叙述视角", page: "59" }, { id: "07103e97-507e-4b20-b920-a07a32e0ff93", pid: "4ba09352-9169-4f87-875c-155ab4625e00", name: "第三节 特有的语言风格", page: "63" }, { id: "9ad3e1e2-499b-43dd-aff3-a47c18afdaeb", pid: "07103e97-507e-4b20-b920-a07a32e0ff93", name: "一、《穆斯林的葬礼》庄重肃穆的语言", page: "63" }, { id: "c73e779e-1d28-4857-a88c-6ec590a623af", pid: "07103e97-507e-4b20-b920-a07a32e0ff93", name: "二、《采桑子》幽默雅致的京味儿语言", page: "64" }, { id: "1e846a6a-fc69-45a2-aa7e-a77986a12195", pid: "", name: "结语", page: "67" }, { id: "6a207fd8-dcbe-4dd8-b9ab-d96460eb5d74", pid: "", name: "参考文献", page: "70" }, { id: "02d120c8-2aa9-40fe-8d15-b44a4279ff5b", pid: "", name: "后记", page: "73" }];
+        window.InitData.pageCount = 73;
+        var noteIsMy = false;
+        //第一步获取相关参数和学习信息
+        window.InitData.ApplicationPath = '/read/';
+        window.InitData.Lid = 'cbdadc83-22d7-42ed-9b7d-94d2999c1eca';
+        window.InitData.Topic = '64c28096-b467-4cc4-9aad-4b8f0c718c7b';
+        window.InitData.AppId = 'CRSP_PSMC_DEV';
+        window.InitData.Confirm = '确定';
+        window.InitData.Cancel = '取消';
+        window.InitData.GroupId = ''; //群组学习Id,暂时保存，和学术社交相关
+        window.InitData.dbCode = 'CJFD';
+        window.InitData.NoteList = [];
+        window.InitData.fileName = 'cbdadc83-22d7-42ed-9b7d-94d2999c1eca.caj';
+        window.InitData.FileSourceType = '1';
+        window.InitData.tableName = 'CJFDTOTAL';
+        window.InitData.HfsFileCode = 'cbdadc83-22d7-42ed-9b7d-94d2999c1eca';
+        window.InitData.chapters=[];
+        window.InitData.Discuss_Read_AlertFillContent = '请填写内容';
+        window.InitData.appId ="CRSP_PSMC_DEV";
+        window.InitData.ImageBasePath='http://xtest.cnki.net/resource/';
+        window.InitData.currentSign = [];
+        window.InitData.DcType = '1';
+        window.InitData.ClockUrl = 'http://192.168.105.87/psmcapi/api/v1.0/Clock/Clock';
+    
+    </script>
+</body>
+</html>
